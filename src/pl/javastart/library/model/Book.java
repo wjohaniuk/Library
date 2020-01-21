@@ -1,7 +1,7 @@
 package pl.javastart.library.model;
 
 public class Book {
-   private String title;
+    private String title;
 
     public String getTitle() {
         return title;
@@ -52,10 +52,10 @@ public class Book {
     }
 
     private String author;
-   private int releseDate;
-   private int pages;
-   private String publisher;
-   private String isbn;
+    private int releseDate;
+    private int pages;
+    private String publisher;
+    private String isbn;
 
     public Book(String title, String author, int releseDate, int pages, String publisher, String isbn) {
         this(title, author, releseDate, pages, publisher);
@@ -72,7 +72,12 @@ public class Book {
 
     public void printInfo() {
         System.out.println("Książki dostępne w bibliotece: ");
-        System.out.println("Tytuł: " + title + " autor: " + author + " data wydania: " + releseDate + " ilość stron: " +
-                pages + " wydawca: " + publisher + " ISBN: " + isbn);
+        String info = title + "; " + author + "; " + releseDate + "; " +
+                pages + "; " + publisher ;
+
+        if (isbn != null) {
+            info = info + "; " + isbn;
+        }
+        System.out.println(info);
     }
 }
