@@ -1,4 +1,4 @@
-package employee;
+package zadania.pl.employee;
 
 public class Employee {
 private String firstName;
