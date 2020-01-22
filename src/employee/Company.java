@@ -1,4 +1,4 @@
-package pl.employee;
+package employee;
 
 public class Company {
     public static void main(String[] args) {
