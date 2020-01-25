@@ -1,24 +1,27 @@
 package pl.javastart.library.app;
 
+import pl.javastart.library.io.DataReader;
 import pl.javastart.library.model.Book;
+
+import java.util.Scanner;
 
 public class Library {
     public static void main(String[] args) {
-        final String appName = "Biblioteka v0.7";
+        final String appName = "Biblioteka v0.8";
+        Scanner scanner = new Scanner(System.in);
 
         Book[] books = new Book[1000];
+        DataReader dataReader = new DataReader();
+        books[0] = dataReader.readAndCreateBook();
+        books[1] = dataReader.readAndCreateBook();
+        dataReader.close();
 
-        books[0] = new Book("W pustyni i w puszczy", "Henryk Sienkiewicz", 2010,
-                296, "Greg", "987456123");
-        books[1] = new Book("Java dla początkujących", "Joshua Bloch", 2013,
-                496, "Helion", "32156489");
-        books[2] = new Book("Sun Certified Programmer for Java", "Bert Bates", 2008,
-                896, "McGraw-Hill");
+
+
 
         System.out.println(appName);
         books[0].printInfo();
         books[1].printInfo();
-        books[2].printInfo();
 
     }
 }
