@@ -1,4 +1,4 @@
-package zadania.pl.petleFor;
+package zadania.pl.petle;
 
 import java.util.Scanner;
 
