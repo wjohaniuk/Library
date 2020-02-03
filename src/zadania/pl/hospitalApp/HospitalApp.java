@@ -21,27 +21,28 @@ public class HospitalApp {
             System.out.println("Wybierz opcję: ");
             option = scanner.nextInt();
             scanner.nextLine();
-        }
 
-        switch (option) {
-            case addPatient:
-                Patient patient = new Patient();
-                System.out.println("Imię: ");
-                patient.setName(scanner.nextLine());
-                System.out.println("Nazwisko: ");
-                patient.setLastName(scanner.nextLine());
-                System.out.println("Pesel: ");
-                patient.setPesel(scanner.nextLine());
-                hospital.addPatient(patient);
-                break;
-            case printPatient:
-                hospital.printPatient();
-                break;
-            case exit:
-                System.out.println("Zamykam aplikacje");
-                break;
-            default:
-                System.out.println("Zły numer");
+
+            switch (option) {
+                case addPatient:
+                    Patient patient = new Patient();
+                    System.out.println("Imię: ");
+                    patient.setName(scanner.nextLine());
+                    System.out.println("Nazwisko: ");
+                    patient.setLastName(scanner.nextLine());
+                    System.out.println("Pesel: ");
+                    patient.setPesel(scanner.nextLine());
+                    hospital.addPatient(patient);
+                    break;
+                case printPatient:
+                    hospital.printPatient();
+                    break;
+                case exit:
+                    System.out.println("Zamykam aplikacje");
+                    break;
+                default:
+                    System.out.println("Zły numer");
+            }
         }
         scanner.close();
     }
